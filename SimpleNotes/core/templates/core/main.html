@@ -1,9 +1,13 @@
 {% extends "core/index.html" %}
-
-
+{% block header %}
+<div id = "header">
+{% include "core/header.html" %}
+</div>
+{% endblock %}
 {% block content %}
-{% if request.user.is_authenticated %}
-Logged in
-{% endif %}
+
+
+
+
 
 {% endblock %}
