@@ -7,4 +7,4 @@ def text_view(request):
 		if note.is_valid():
 			note.save()
 			return render(request, "texts/successful.html")
-	return render(request, "texts/textadd.html", TextForm())
+	return render(request, "texts/textadd.html", {"text_form" : TextForm()})
