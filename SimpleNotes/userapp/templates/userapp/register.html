@@ -1,9 +1,0 @@
-{% extends "core/index.html" %}
-{% block content %}
-<h1> Create your account: </h1>
-<form method = "post">
-{{ form.as_p }}
-{% csrf_token %}
-<input type = "submit" value = "Create">
-</form>
-{% endblock %}
