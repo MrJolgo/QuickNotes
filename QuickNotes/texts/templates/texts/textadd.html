@@ -1,4 +1,35 @@
 {% extends 'core/base.html' %}
 {% block content %}
-{{ text_form }}
+{% load static %}
+ 
+ <script type = "text/javascript" src = "{% static 'texts/script.js' %}">
+ </script>
+
+<div id = "notediv">
+	<form method = "POST">	
+	{% csrf_token %}
+	<div id = "textcontainer">
+		{{ text_form.body }}
+	</div>
+	<div id = "pncfooter">
+		<div id = "pnccontainer">
+			<img src = "{% static 'texts/padlock.jpg' %}" style = "width: 5vh; height: 5vh; margin-top: 0vh">
+			<input type = "checkbox" id = "pwdcheckbox">
+			{{ text_form.password }}
+			
+
+		</div>
+		<div id = "buttoncontainer">
+			<input type = "submit" id = "createbutton" value = "DONE">
+		</div>
+
+	</div>
+	<div id = "createbuttondiv">
+		
+	</div>
+ 
+	</form>
+</div>
+
+
 {% endblock %}
