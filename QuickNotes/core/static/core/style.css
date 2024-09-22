@@ -1,3 +1,10 @@
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: inherit; 
+    box-shadow: none;
+}
+
+
 #logo {
 	width: 50%;
 	height: 30%;
@@ -12,29 +19,26 @@
 	padding: 5px 10px;
 	text-align: center;
 	text-decoration: none;
-	color: black;
+	color: white;
 	font-family: "Monospace";
 	font-size: 40px;
 	border-style: solid;
-	border-radius: 8px;
+	border-radius: 5px;
 	border-width: 2px;
-	background-color: white;
-	border-color: black;
+	background-color: black;
  
 }
 #createbutton {
 	text-align: center;
 	text-decoration: none;
-	color: black;
+	color: white;
 	font-family: "Monospace";
 	font-size: 27px;
 	border-style: solid;
-	border-radius: 8px;
-	border-width: 2px;
-	background-color: white;
-	border-color: black;
-	font-family: "Verdana";
+	border-radius: 5px;
+	background-color: black;
 	margin-top: 0;
+	padding: 4px 8px;
 
 }
 
@@ -65,8 +69,6 @@
 	margin-right: 5%;
 	width: 90%;
 	border-radius: 5px;
-	border-width: 2px;
-	border-color: black;
 	font-size: 22px;
 	font-family: "Verdana";
 	resize: none;
@@ -78,13 +80,7 @@
 	margin-top: 1vh;
 }
 
-#notediv {
-	width: 60vh;
-	height: 75vh;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: auto;
-	margin-top: 3%;
+#notediv, #successdiv, #display{
 	border-radius: 8px;
 	box-shadow:
     2px 2px 2.8px 2.2px rgba(0, 0, 0, 0.034),
@@ -92,7 +88,18 @@
     0 12.5px 10px rgba(0, 0, 0, 0.06),
     0 22.3px 17.9px rgba(0, 0, 0, 0.072),
     1px 1px 41.8px 33.4px rgba(0, 0, 0, 0.086),
-    0 100px 80px rgba(0, 0, 0, 0.12)
+    0 100px 80px rgba(0, 0, 0, 0.12);
+    margin-left: auto;
+	margin-right: auto;
+	margin-bottom: auto;
+
+}
+
+#notediv, #display {
+	width: 60vh;
+	height: 75vh;
+	margin-top: 3%;
+	
 }
 
 
@@ -118,6 +125,7 @@
 #pncfooter {
 	width: 100%;
 	height: 7vh;
+	margin-top: 1%;
 }
 
 #createbuttondiv {
@@ -130,4 +138,26 @@
 #pwdcheckbox {
 	accent-color: black;
 	border-color: black;
+}
+
+
+
+#successdiv {
+	width: 68vh;
+	height: 20vh;
+	
+	margin-top: 18%;
+    padding-top: 7vh;
+}
+
+#linkdiv {
+	margin: auto;
+	border-width: 1px;
+	border-color: black;
+	border-style: solid;
+	width: 80%;
+	margin-top: 4vh;
+	display: flex;
+	font-size: 17px;
+	font-weight: bold;
 }

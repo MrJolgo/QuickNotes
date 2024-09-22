@@ -9,7 +9,7 @@ def text_view(request):
 			if note.cleaned_data["password"] != "":
 				new_note.set_password(note.cleaned_data["password"])
 			new_note.save()
-
-			return render(request, "texts/successful.html")
+			uuid = new_note.text_id
+			return render(request, "texts/successful.html", {"uuid" : uuid})
 
 	return render(request, "texts/textadd.html", {"text_form" : TextForm()})

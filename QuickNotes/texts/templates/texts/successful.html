@@ -1,5 +1,10 @@
 {% extends "core/base.html" %}
 
 {% block content %}
+<div id = "successdiv">
+	<div id = "linkdiv">
+		{{ request.get_host }}/note/{{ uuid }} 
+	</div>
+</div>
 
 {% endblock %}
